@@ -1,51 +1,214 @@
-/* ESTILOS GENERALES */
+/* =========================
+   RESET DEL BOX MODEL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
 
 body {
     background-color: #333333;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     font-family: 'Abel', sans-serif;
 }
 
 
-/* ESTILOS DEL HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
     background-color: #000000;
     color: white;
-    padding: 3rem;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
-/* ESTILOS DEL MENU */
+/* =========================
+   LOGO
+========================= */
 
-header nav ul li {
-    display: inline-block;
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+nav ul li {
     background-color: #222222;
+    padding: 12px 20px;
+}
+
+nav ul li a {
     color: white;
-    padding: 12px;
-    margin: 10px;
+    text-decoration: none;
 }
 
 
-/* ESTILOS DEL MAIN */
+/* =========================
+   MAIN
+========================= */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
 
 section {
     background-color: #F5F5F5;
-    margin: 1rem;
-    padding: 1rem;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 
-/* ESTILOS DE LOS TITULOS */
+/* =========================
+   ARTICULOS
+========================= */
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+
+/* =========================
+   FIGURAS GENERALES
+========================= */
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+
+/* =========================
+   IMAGENES GENERALES
+========================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   IMAGEN GRANDE DE INICIO
+========================= */
+
+/* La imagen de "Cortes personalizados" */
+
+main > section:first-child article:first-of-type figure img {
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* La frase queda debajo de la imagen */
+
+main > section:first-child article:first-of-type figure {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+/* Las dos imágenes de Servicios van una al lado de la otra */
+
+main > section:first-child article:nth-of-type(2) figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+/* Tamaño de las imágenes de Servicios */
+
+main > section:first-child article:nth-of-type(2) figure img {
+    width: 400px;
+    max-width: 45%;
+    height: auto;
+}
+
+
+/* El texto de Servicios queda abajo */
+
+main > section:first-child article:nth-of-type(2) figure figcaption {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* =========================
+   TITULOS
+========================= */
 
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
 }
 
+h2 {
+    font-size: 2rem;
+}
 
-/* ESTILOS DE LOS PARRAFOS */
+h3 {
+    font-size: 1.5rem;
+}
+
+
+/* =========================
+   PARRAFOS
+========================= */
 
 p {
     font-size: 1rem;
@@ -53,8 +216,21 @@ p {
 }
 
 
-/* ESTILOS DE LOS ENLACES */
+/* =========================
+   FOOTER
+========================= */
 
-a {
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer a {
     color: white;
 }
