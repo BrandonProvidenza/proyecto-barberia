@@ -1,0 +1,60 @@
+/* ESTILOS GENERALES */
+
+body {
+    background-color: #333333;
+    height: 100%;
+    width: 100%;
+    font-family: 'Abel', sans-serif;
+}
+
+
+/* ESTILOS DEL HEADER */
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 3rem;
+}
+
+
+/* ESTILOS DEL MENU */
+
+header nav ul li {
+    display: inline-block;
+    background-color: #222222;
+    color: white;
+    padding: 12px;
+    margin: 10px;
+}
+
+
+/* ESTILOS DEL MAIN */
+
+section {
+    background-color: #F5F5F5;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+/* ESTILOS DE LOS TITULOS */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+/* ESTILOS DE LOS PARRAFOS */
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+/* ESTILOS DE LOS ENLACES */
+
+a {
+    color: white;
+}
