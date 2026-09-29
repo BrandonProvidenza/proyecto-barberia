@@ -33,6 +33,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 
@@ -47,6 +48,7 @@ header {
 
 .logo img {
     width: 300px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -60,6 +62,7 @@ nav ul {
     align-items: center;
     gap: 15px;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -74,14 +77,34 @@ nav ul li a {
 
 
 /* =========================
-   MAIN
+   MAIN - MOBILE FIRST
 ========================= */
 
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "bienvenida"
+        "servicios";
+
     gap: 20px;
+
     padding: 20px;
+}
+
+
+/* =========================
+   AREAS DEL GRID - INDEX
+========================= */
+
+.bienvenida {
+    grid-area: bienvenida;
+}
+
+.servicios {
+    grid-area: servicios;
 }
 
 
@@ -112,7 +135,7 @@ article {
 
 
 /* =========================
-   FIGURAS GENERALES
+   FIGURAS
 ========================= */
 
 figure {
@@ -125,7 +148,7 @@ figure {
 
 
 /* =========================
-   IMAGENES GENERALES
+   IMAGENES
 ========================= */
 
 img {
@@ -135,56 +158,18 @@ img {
 
 
 /* =========================
-   IMAGEN GRANDE DE INICIO
+   IMAGEN DE INICIO
 ========================= */
 
-/* La imagen de "Cortes personalizados" */
-
-main > section:first-child article:first-of-type figure img {
-    width: 900px;
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* La frase queda debajo de la imagen */
-
-main > section:first-child article:first-of-type figure {
+.imagen-inicio {
     flex-direction: column;
     align-items: center;
 }
 
-
-/* =========================
-   SERVICIOS
-========================= */
-
-/* Las dos imágenes de Servicios van una al lado de la otra */
-
-main > section:first-child article:nth-of-type(2) figure {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-
-/* Tamaño de las imágenes de Servicios */
-
-main > section:first-child article:nth-of-type(2) figure img {
-    width: 400px;
-    max-width: 45%;
+.imagen-inicio img {
+    width: 900px;
+    max-width: 100%;
     height: auto;
-}
-
-
-/* El texto de Servicios queda abajo */
-
-main > section:first-child article:nth-of-type(2) figure figcaption {
-    width: 100%;
-    text-align: center;
 }
 
 
@@ -227,10 +212,127 @@ footer {
 
     display: flex;
     align-items: center;
+    justify-content: center;
+
     gap: 20px;
     flex-wrap: wrap;
 }
 
 footer a {
     color: white;
+}
+
+
+/* ==================================================
+   PAGINA SERVICIOS
+   MOBILE FIRST
+================================================== */
+
+.main-servicios {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "intro"
+        "estilo";
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   AREAS DE SERVICIOS
+========================= */
+
+.servicios-intro {
+    grid-area: intro;
+}
+
+.servicios-estilo {
+    grid-area: estilo;
+}
+
+
+/* =========================
+   IMAGENES DE SERVICIOS
+========================= */
+
+.imagenes-servicios {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.imagenes-servicios img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ==================================================
+   DESKTOP
+   BREAKPOINT 1024px
+================================================== */
+
+@media (min-width: 1024px) {
+
+    /* =========================
+       INDEX
+    ========================= */
+
+    main {
+        grid-template-columns: 2fr 1fr;
+
+        grid-template-areas:
+            "bienvenida servicios";
+
+        gap: 30px;
+
+        padding: 30px;
+    }
+
+
+    /* =========================
+       IMAGEN DE INICIO
+    ========================= */
+
+    .imagen-inicio img {
+        width: 900px;
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       PAGINA SERVICIOS
+    ========================= */
+
+    .main-servicios {
+        grid-template-columns: 1fr 2fr;
+
+        grid-template-areas:
+            "intro estilo";
+
+        gap: 30px;
+
+        padding: 30px;
+    }
+
+
+    /* =========================
+       IMAGENES DE SERVICIOS
+    ========================= */
+
+    .imagenes-servicios {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px;
+    }
+
 }
