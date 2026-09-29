@@ -1,5 +1,5 @@
 /* =========================
-   RESET DEL BOX MODEL
+   RESET
 ========================= */
 
 * {
@@ -18,61 +18,108 @@ body {
     min-height: 100vh;
     width: 100%;
     font-family: 'Abel', sans-serif;
+    color: #111111;
 }
 
 
 /* =========================
-   HEADER
+   NAVBAR BOOTSTRAP
 ========================= */
 
-header {
+.navbar-videnz {
     background-color: #000000;
-    color: white;
-    padding: 20px 30px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+    padding: 15px 30px;
 }
 
 
-/* =========================
-   LOGO
-========================= */
+/* Logo */
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
+.navbar-videnz .logo img {
     width: 300px;
     max-width: 100%;
     height: auto;
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* Links del navbar */
 
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    background-color: #222222;
-    padding: 12px 20px;
-}
-
-nav ul li a {
+.navbar-videnz .nav-link {
     color: white;
-    text-decoration: none;
+    padding: 10px 15px;
+    margin: 3px;
+    border-radius: 5px;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* HOVER */
+
+.navbar-videnz .nav-link:hover {
+    color: white;
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+
+/* FOCUS */
+
+.navbar-videnz .nav-link:focus {
+    color: white;
+    background-color: #444444;
+    outline: 2px solid #aaaaaa;
+    outline-offset: 2px;
+}
+
+
+/* ACTIVE */
+
+.navbar-videnz .nav-link:active {
+    color: white;
+    background-color: #555555;
+    transform: scale(0.96);
+}
+
+
+/* Link activo */
+
+.navbar-videnz .nav-link.active {
+    color: white;
+}
+
+
+/* Botón hamburguesa */
+
+.navbar-videnz .navbar-toggler {
+    border: 1px solid #ffffff;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Hover hamburguesa */
+
+.navbar-videnz .navbar-toggler:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+}
+
+
+/* Focus hamburguesa */
+
+.navbar-videnz .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px #777777;
+}
+
+
+/* Active hamburguesa */
+
+.navbar-videnz .navbar-toggler:active {
+    transform: scale(0.95);
 }
 
 
@@ -96,7 +143,7 @@ main {
 
 
 /* =========================
-   AREAS DEL GRID - INDEX
+   AREAS DEL GRID
 ========================= */
 
 .bienvenida {
@@ -158,18 +205,121 @@ img {
 
 
 /* =========================
-   IMAGEN DE INICIO
+   CARRUSEL
 ========================= */
 
-.imagen-inicio {
-    flex-direction: column;
-    align-items: center;
+.carousel {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 3px solid #222222;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.imagen-inicio img {
-    width: 900px;
-    max-width: 100%;
-    height: auto;
+
+/* Imágenes del carrusel */
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/* Texto del carrusel */
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+
+/* Botones del carrusel */
+
+.carousel-control-prev,
+.carousel-control-next {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.carousel-control-prev:hover {
+    opacity: 0.8;
+    transform: translateX(-5px);
+}
+
+.carousel-control-next:hover {
+    opacity: 0.8;
+    transform: translateX(5px);
+}
+
+
+/* Focus */
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    outline: 2px solid white;
+    outline-offset: -5px;
+}
+
+
+/* Active */
+
+.carousel-control-prev:active,
+.carousel-control-next:active {
+    transform: scale(0.9);
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-videnz {
+    background-color: #000000;
+    color: white;
+    border: 2px solid #000000;
+    padding: 10px 25px;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.btn-videnz:hover {
+    background-color: #333333;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Focus */
+
+.btn-videnz:focus {
+    background-color: #444444;
+    color: white;
+    outline: 3px solid #999999;
+    outline-offset: 3px;
+}
+
+
+/* Active */
+
+.btn-videnz:active {
+    background-color: #555555 !important;
+    color: white !important;
+    transform: scale(0.95);
 }
 
 
@@ -202,6 +352,15 @@ p {
 
 
 /* =========================
+   LISTAS
+========================= */
+
+ul {
+    padding-left: 25px;
+}
+
+
+/* =========================
    FOOTER
 ========================= */
 
@@ -218,14 +377,52 @@ footer {
     flex-wrap: wrap;
 }
 
+
+/* Links del footer */
+
 footer a {
     color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Hover */
+
+footer a:hover {
+    color: white;
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+
+/* Focus */
+
+footer a:focus {
+    color: white;
+    background-color: #444444;
+    outline: 2px solid #aaaaaa;
+    outline-offset: 2px;
+}
+
+
+/* Active */
+
+footer a:active {
+    color: white;
+    background-color: #555555;
+    transform: scale(0.95);
 }
 
 
 /* ==================================================
    PAGINA SERVICIOS
-   MOBILE FIRST
 ================================================== */
 
 .main-servicios {
@@ -243,13 +440,10 @@ footer a {
 }
 
 
-/* =========================
-   AREAS DE SERVICIOS
-========================= */
-
 .servicios-intro {
     grid-area: intro;
 }
+
 
 .servicios-estilo {
     grid-area: estilo;
@@ -270,6 +464,7 @@ footer a {
     padding: 20px;
 }
 
+
 .imagenes-servicios img {
     width: 100%;
     height: auto;
@@ -278,7 +473,6 @@ footer a {
 
 /* ==================================================
    DESKTOP
-   BREAKPOINT 1024px
 ================================================== */
 
 @media (min-width: 1024px) {
@@ -300,12 +494,20 @@ footer a {
 
 
     /* =========================
-       IMAGEN DE INICIO
+       LOGO
     ========================= */
 
-    .imagen-inicio img {
-        width: 900px;
-        max-width: 100%;
+    .navbar-videnz .logo img {
+        width: 300px;
+    }
+
+
+    /* =========================
+       CARRUSEL
+    ========================= */
+
+    .carousel-item img {
+        height: 500px;
     }
 
 
@@ -326,13 +528,72 @@ footer a {
 
 
     /* =========================
-       IMAGENES DE SERVICIOS
+       IMAGENES SERVICIOS
     ========================= */
 
     .imagenes-servicios {
         grid-template-columns: repeat(2, 1fr);
 
         gap: 30px;
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 767px) {
+
+    .navbar-videnz {
+        padding: 10px 15px;
+    }
+
+
+    .navbar-videnz .logo img {
+        width: 180px;
+    }
+
+
+    .navbar-videnz .nav-link {
+        margin: 2px 0;
+    }
+
+
+    main {
+        padding: 15px;
+    }
+
+
+    section {
+        padding: 15px;
+    }
+
+
+    article {
+        padding: 10px;
+    }
+
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+
+    footer {
+        padding: 20px;
+        text-align: center;
     }
 
 }
