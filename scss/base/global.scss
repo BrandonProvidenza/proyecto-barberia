@@ -1,0 +1,42 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: v.$color-fondo;
+  color: v.$color-texto;
+  font-family: v.$fuente-principal;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+section {
+  padding: 30px 16px;
+}
+
+@include m.responsive(v.$ancho-tablet) {
+  section {
+    padding: 45px 24px;
+  }
+}
+
+@include m.responsive(v.$ancho-desktop) {
+  section {
+    padding: 60px 40px;
+  }
+}

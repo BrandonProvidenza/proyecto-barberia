@@ -1,0 +1,56 @@
+
+@use "../utilities/variables" as v;
+
+/* Animación de entrada */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de zoom */
+@keyframes zoom-suave {
+    from {
+        transform: scale(0.97);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Aplicación de animaciones */
+.bienvenida {
+    animation: aparecer 0.8s ease both;
+}
+
+#carouselVidenz {
+    animation: zoom-suave 0.8s ease both;
+}
+
+/* Transiciones al pasar el mouse */
+img {
+    transition: transform v.$transicion;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,50 @@
+
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+%tarjeta-base {
+    background-color: v.$color-secundario;
+    color: v.$color-texto;
+    padding: 20px;
+    border-radius: v.$radio-borde;
+    transition: transform v.$transicion, box-shadow v.$transicion;
+}
+
+.card-videnz {
+    @extend %tarjeta-base;
+    margin-bottom: 20px;
+    min-width: 0;
+
+    h3 {
+        color: v.$color-acento;
+        margin-bottom: 12px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgb(0 0 0 / 20%);
+    }
+}
+
+.servicios article {
+    @extend %tarjeta-base;
+    margin-bottom: 20px;
+    min-width: 0;
+}
+
+@include m.responsive(v.$ancho-tablet) {
+    .card-videnz,
+    .servicios article {
+        padding: 25px;
+    }
+}
+
+@include m.responsive(v.$ancho-desktop) {
+    .card-videnz {
+        margin-bottom: 30px;
+    }
+}

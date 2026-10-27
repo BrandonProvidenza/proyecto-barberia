@@ -1,0 +1,46 @@
+
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+%estilo-interactivo {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: v.$radio-borde;
+    transition: all v.$transicion;
+}
+
+.btn-videnz {
+    @extend %estilo-interactivo;
+    @include m.boton(v.$color-acento, v.$color-principal);
+    border: 2px solid v.$color-acento;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgb(0 0 0 / 25%);
+    }
+
+    &:focus-visible {
+        outline: 3px solid v.$color-texto;
+        outline-offset: 3px;
+    }
+}
+
+.btn-videnz-secundario {
+    @extend %estilo-interactivo;
+    @include m.boton(transparent, v.$color-texto);
+    border: 2px solid v.$color-acento;
+
+    &:hover {
+        background-color: v.$color-acento;
+        color: v.$color-principal;
+    }
+}
+
+@media (max-width: 767px) {
+    .btn-videnz,
+    .btn-videnz-secundario {
+        max-width: 100%;
+        padding: 10px 16px;
+    }
+}

@@ -1,0 +1,71 @@
+
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+header {
+    width: 100%;
+    min-width: 0;
+
+    .navbar-videnz {
+        background-color: v.$color-principal;
+        padding: 12px 15px;
+    }
+
+    .logo img {
+        width: 300px;
+        max-width: 100%;
+        height: auto;
+        transition: transform v.$transicion;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+
+    .nav-link {
+        color: v.$color-texto;
+        transition: color v.$transicion;
+
+        &:hover,
+        &:focus-visible {
+            color: v.$color-acento;
+        }
+    }
+}
+
+/* TABLETS: desde 768 px */
+@include m.responsive(v.$ancho-tablet) {
+    header .navbar-videnz {
+        padding: 15px 25px;
+    }
+
+    header .logo img {
+        width: 250px;
+    }
+}
+
+/* COMPUTADORAS: desde 1024 px */
+@include m.responsive(v.$ancho-desktop) {
+    header .navbar-videnz {
+        padding: 15px 35px;
+    }
+
+    header .logo img {
+        width: 300px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 767px) {
+    header .logo img {
+        width: 200px;
+    }
+
+    header .navbar-videnz {
+        padding: 10px 12px;
+    }
+
+    header .navbar-collapse {
+        padding-top: 10px;
+    }
+}
