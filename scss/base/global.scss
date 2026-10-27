@@ -1,3 +1,4 @@
+
 @use "../utilities/variables" as v;
 @use "../utilities/mixins" as m;
 
@@ -8,21 +9,8 @@ html {
 body {
   background-color: v.$color-fondo;
   color: v.$color-texto;
-  font-family: v.$fuente-principal;
-  line-height: 1.6;
   min-height: 100vh;
   overflow-wrap: break-word;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-  margin-bottom: 16px;
-}
-
-p {
-  margin-bottom: 16px;
 }
 
 section {
