@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Barbería Videnz - Inicio</title>
+    <title>Barbería Videnz | Cortes de cabello y barba</title>
+    <meta name="description" content="Conocé Barbería Videnz: cortes de cabello personalizados, degradados y arreglo de barba para renovar tu estilo.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Barbería Videnz">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,327 +24,232 @@
 
     <!-- Animaciones AOS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <!-- NAVBAR BOOTSTRAP -->
-
     <header data-aos="fade-down" data-aos-duration="800">
-
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-videnz">
-
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-videnz" aria-label="Navegación principal">
             <div class="container-fluid">
 
-                <a class="navbar-brand logo" href="index.html">
-                    <img src="img/logo-videnz.png" alt="Logo Barbería Videnz">
+                <a class="navbar-brand logo" href="index.html" aria-label="Barbería Videnz, inicio">
+                    <img src="img/logo-videnz.png" alt="Logo de Barbería Videnz">
                 </a>
-
-                <!-- Botón hamburguesa -->
 
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarVidenz"
                     aria-controls="navbarVidenz"
                     aria-expanded="false"
-                    aria-label="Abrir menú">
-
+                    aria-label="Abrir o cerrar menú de navegación">
                     <span class="navbar-toggler-icon"></span>
-
                 </button>
 
-                <!-- Menú -->
-
                 <div class="collapse navbar-collapse" id="navbarVidenz">
-
                     <ul class="navbar-nav ms-auto">
-
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">
-                                Inicio
-                            </a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/nosotros.html">
-                                Nosotros
-                            </a>
+                            <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/servicios.html">
-                                Servicios
-                            </a>
+                            <a class="nav-link" href="pages/servicios.html">Servicios</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/galeria.html">
-                                Galería
-                            </a>
+                            <a class="nav-link" href="pages/galeria.html">Galería</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/contacto.html">
-                                Contacto
-                            </a>
+                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
                         </li>
-
                     </ul>
-
                 </div>
 
             </div>
-
         </nav>
-
     </header>
-
-    <!-- CONTENIDO PRINCIPAL -->
 
     <main>
 
-        <section class="bienvenida">
+        <section class="bienvenida" aria-labelledby="titulo-principal">
 
-            <h2 data-aos="fade-up">
-                Bienvenidos a la barbería Videnz
-            </h2>
+            <h1 id="titulo-principal" data-aos="fade-up">
+                Barbería Videnz: cortes de cabello y barba
+            </h1>
 
             <p data-aos="fade-up" data-aos-delay="100">
-                En Barbería Videnz nos dedicamos a ofrecer cortes de calidad
-                y un estilo único para cada cliente.
+                En Barbería Videnz ofrecemos cortes de cabello personalizados
+                y estilos de barba adaptados a las preferencias de cada cliente.
+                Nuestro objetivo es ayudarte a encontrar el estilo que te representa.
             </p>
 
             <article>
-
-                <h3 data-aos="fade-up">
-                    Cortes personalizados
-                </h3>
+                <h2 data-aos="fade-up">Cortes de cabello personalizados</h2>
 
                 <p data-aos="fade-up" data-aos-delay="100">
-                    Realizamos cortes adaptados al estilo y preferencia
-                    de cada cliente.
+                    Realizamos cortes clásicos, degradados y estilos modernos,
+                    cuidando cada detalle para lograr un resultado acorde a tu estilo.
                 </p>
 
-                <!-- CARRUSEL BOOTSTRAP -->
-
+                <!-- Carrusel de imágenes de la barbería -->
                 <div id="carouselVidenz"
                     class="carousel slide"
                     data-bs-ride="carousel"
+                    aria-label="Galería de imágenes de Barbería Videnz"
                     data-aos="zoom-in"
                     data-aos-duration="1000">
 
-                    <!-- Indicadores -->
-
                     <div class="carousel-indicators">
-
                         <button type="button"
                             data-bs-target="#carouselVidenz"
                             data-bs-slide-to="0"
                             class="active"
                             aria-current="true"
-                            aria-label="Imagen 1">
+                            aria-label="Mostrar imagen del interior de la barbería">
                         </button>
 
                         <button type="button"
                             data-bs-target="#carouselVidenz"
                             data-bs-slide-to="1"
-                            aria-label="Imagen 2">
+                            aria-label="Mostrar imagen del servicio de barba">
                         </button>
 
                         <button type="button"
                             data-bs-target="#carouselVidenz"
                             data-bs-slide-to="2"
-                            aria-label="Imagen 3">
+                            aria-label="Mostrar imagen de un corte de cabello">
                         </button>
-
                     </div>
-
-                    <!-- Imágenes -->
 
                     <div class="carousel-inner">
 
                         <div class="carousel-item active">
-
                             <img src="img/barberia.jpg"
                                 class="d-block w-100"
-                                alt="Interior de la barbería Videnz">
+                                alt="Interior y espacio de atención de Barbería Videnz">
 
                             <div class="carousel-caption d-none d-md-block">
-
-                                <h5>Barbería Videnz</h5>
-
-                                <p>
-                                    Un espacio pensado para tu estilo.
-                                </p>
-
+                                <h3>Barbería Videnz</h3>
+                                <p>Un espacio pensado para tu estilo.</p>
                             </div>
-
                         </div>
 
                         <div class="carousel-item">
-
                             <img src="img/barba.jpg"
                                 class="d-block w-100"
-                                alt="Servicio de barba">
+                                alt="Servicio de arreglo y cuidado de barba">
 
                             <div class="carousel-caption d-none d-md-block">
-
-                                <h5>Servicio de barba</h5>
-
-                                <p>
-                                    Cuidamos cada detalle.
-                                </p>
-
+                                <h3>Arreglo de barba</h3>
+                                <p>Cuidamos cada detalle de tu estilo.</p>
                             </div>
-
                         </div>
 
                         <div class="carousel-item">
-
                             <img src="img/images.jpg"
                                 class="d-block w-100"
-                                alt="Corte de cabello">
+                                alt="Ejemplo de corte de cabello realizado en barbería">
 
                             <div class="carousel-caption d-none d-md-block">
-
-                                <h5>Cortes personalizados</h5>
-
-                                <p>
-                                    Encontrá el estilo que te representa.
-                                </p>
-
+                                <h3>Cortes personalizados</h3>
+                                <p>Encontrá el estilo que te representa.</p>
                             </div>
-
                         </div>
 
                     </div>
 
-                    <!-- Botón anterior -->
-
                     <button class="carousel-control-prev"
                         type="button"
                         data-bs-target="#carouselVidenz"
-                        data-bs-slide="prev">
-
-                        <span class="carousel-control-prev-icon"
-                            aria-hidden="true">
-                        </span>
-
-                        <span class="visually-hidden">
-                            Anterior
-                        </span>
-
+                        data-bs-slide="prev"
+                        aria-label="Ver imagen anterior">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
                     </button>
-
-                    <!-- Botón siguiente -->
 
                     <button class="carousel-control-next"
                         type="button"
                         data-bs-target="#carouselVidenz"
-                        data-bs-slide="next">
-
-                        <span class="carousel-control-next-icon"
-                            aria-hidden="true">
-                        </span>
-
-                        <span class="visually-hidden">
-                            Siguiente
-                        </span>
-
+                        data-bs-slide="next"
+                        aria-label="Ver imagen siguiente">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
                     </button>
 
                 </div>
 
-                <!-- BOTÓN BOOTSTRAP -->
-
-                <div class="text-center mt-4"
-                    data-aos="fade-up">
-
-                    <a href="pages/servicios.html"
-                        class="btn btn-dark btn-videnz">
-
-                        Ver nuestros servicios
-
+                <div class="text-center mt-4" data-aos="fade-up">
+                    <a href="pages/servicios.html" class="btn btn-dark btn-videnz">
+                        Conocé nuestros servicios de barbería
                     </a>
-
                 </div>
 
             </article>
-
         </section>
 
-        <!-- SERVICIOS -->
+        <section class="servicios" aria-labelledby="titulo-servicios" data-aos="fade-up">
 
-        <section class="servicios" data-aos="fade-up">
-
-            <h2>Nuestros servicios</h2>
+            <h2 id="titulo-servicios">Servicios de barbería</h2>
 
             <article>
+                <h3>Cortes y cuidado personal</h3>
 
-                <h3>Servicios de barbería</h3>
+                <p>
+                    Elegí entre diferentes opciones de corte de cabello y cuidado de barba
+                    para completar tu estilo.
+                </p>
 
                 <ul>
-
                     <li>Corte clásico</li>
-
-                    <li>Fade</li>
-
-                    <li>Barba</li>
-
-                    <li>Corte y barba</li>
-
+                    <li>Corte degradado o fade</li>
+                    <li>Arreglo de barba</li>
+                    <li>Corte de cabello y barba</li>
                 </ul>
 
+                <a href="pages/servicios.html" class="btn btn-dark btn-videnz">
+                    Ver todos los servicios
+                </a>
             </article>
 
         </section>
 
     </main>
 
-    <!-- FOOTER -->
-
     <footer data-aos="fade-up">
+        <p>Estilo, calidad y atención personalizada en Barbería Videnz.</p>
 
-        <p>
-            Estilo, calidad y atención personalizada
-        </p>
+        <nav aria-label="Redes sociales">
+            <p>Seguinos en nuestras redes sociales:</p>
 
-        <p>
-            Nuestras redes sociales
-        </p>
+            <a href="https://www.instagram.com/brandon_alann/"
+                target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
 
-        <a href="https://www.instagram.com/brandon_alann/">
-            Instagram
-        </a>
+            <a href="https://x.com/BrandonnnAlan"
+                target="_blank" rel="noopener noreferrer">
+                X (Twitter)
+            </a>
 
-        <a href="https://x.com/BrandonnnAlan">
-            Twitter
-        </a>
+            <a href="https://www.twitch.tv/brandonalann"
+                target="_blank" rel="noopener noreferrer">
+                Twitch
+            </a>
 
-        <a href="https://www.twitch.tv/brandonalann">
-            Twitch
-        </a>
+            <a href="https://www.facebook.com/BrandonnProvidenza/"
+                target="_blank" rel="noopener noreferrer">
+                Facebook
+            </a>
+        </nav>
 
-        <a href="https://www.facebook.com/BrandonnProvidenza/">
-            Facebook
-        </a>
-
-        <p>
-            &copy; 2026 Barbería Videnz. Todos los derechos reservados.
-        </p>
-
+        <p>&copy; 2026 Barbería Videnz. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Bootstrap JS -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Animaciones AOS JS -->
-
+    <!-- Animaciones AOS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-    <!-- Inicializar animaciones -->
 
     <script>
         AOS.init({
@@ -352,5 +260,4 @@
     </script>
 
 </body>
-
 </html>

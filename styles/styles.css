@@ -353,6 +353,9 @@ footer a:hover, footer a:focus-visible {
   border: 2px solid #c9a66b;
 }
 .btn-videnz:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
@@ -373,6 +376,10 @@ footer a:hover, footer a:focus-visible {
 .btn-videnz-secundario:hover {
   background-color: #c9a66b;
   color: #000000;
+}
+.btn-videnz-secundario:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
 }
 
 @media (max-width: 767px) {

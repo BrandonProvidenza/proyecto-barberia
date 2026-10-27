@@ -16,6 +16,9 @@
     border: 2px solid v.$color-acento;
 
     &:hover {
+        background-color: v.$color-texto;
+        color: v.$color-principal;
+        border-color: v.$color-texto;
         transform: translateY(-3px);
         box-shadow: 0 5px 15px rgb(0 0 0 / 25%);
     }
@@ -34,6 +37,11 @@
     &:hover {
         background-color: v.$color-acento;
         color: v.$color-principal;
+    }
+
+    &:focus-visible {
+        outline: 3px solid v.$color-texto;
+        outline-offset: 3px;
     }
 }
 
